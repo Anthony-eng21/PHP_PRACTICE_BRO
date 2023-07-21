@@ -69,10 +69,10 @@
               //result of our php script (echoed result)
               // Update the coin value with the result from PHP
               const coin = document.getElementById("coin");
-              coin.innerHTML = result;
               coin.classList.add("flipped");
               setTimeout(() => {
-                coin.classList.remove("flipped");
+                  coin.classList.remove("flipped");
+                  coin.innerHTML = result;
               }, 500);
             })
             .catch((error) => {
