@@ -66,13 +66,13 @@
           fetch("flip.php")
             .then((response) => response.text())
             .then((result) => {
-              //result of our php script (echoed result)
-              // Update the coin value with the result from PHP
               const coin = document.getElementById("coin");
               coin.classList.add("flipped");
               setTimeout(() => {
-                  coin.classList.remove("flipped");
-                  coin.innerHTML = result;
+                coin.classList.remove("flipped");
+                // Update the coin value with the result from PHP
+                //result of our php script (echoed result)
+                coin.innerHTML = result;
               }, 500);
             })
             .catch((error) => {
